@@ -126,7 +126,7 @@ class TestAccountService(TestCase):
     # ADD YOUR TEST CASES HERE ...
 
     def test_read_an_account(self):
-        """"""
+        """It should Read a single Account"""
         account = self._create_accounts(1)[0]
         resp = self.client.get(
             f"{BASE_URL}/{account.id}", content_type = "application/json"
